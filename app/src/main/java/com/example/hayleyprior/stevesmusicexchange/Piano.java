@@ -6,17 +6,30 @@ package com.example.hayleyprior.stevesmusicexchange;
 
 public class Piano extends Instrument implements Playable, Sellable {
 
-    public Piano(Type type, String colour) {
+    private double buyPrice;
+    private double sellPrice;
+
+    public Piano(Type type, String colour, double buyPrice, double sellPrice) {
         super(type, colour);
+        this.buyPrice = buyPrice;
+        this.sellPrice = sellPrice;
+    }
+
+    public double getBuyPrice() {
+        return this.buyPrice;
+    }
+
+    public double getSellPrice() {
+        return this.sellPrice;
     }
 
     @Override
     public String play() {
-        return null;
+        return "Plink";
     }
 
     @Override
     public double calculateMarkUp() {
-        return 0;
+        return this.sellPrice - this.buyPrice;
     }
 }

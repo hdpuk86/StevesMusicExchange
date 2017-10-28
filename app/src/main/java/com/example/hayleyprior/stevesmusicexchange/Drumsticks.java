@@ -4,5 +4,26 @@ package com.example.hayleyprior.stevesmusicexchange;
  * Created by hayleyprior on 27/10/2017.
  */
 
-//public class Drumsticks implements Sellable {
-//}
+public class Drumsticks implements Sellable {
+
+    private double sellPrice;
+    private double buyPrice;
+
+    public Drumsticks(double buyPrice, double sellPrice) {
+        this.sellPrice = sellPrice;
+        this.buyPrice = buyPrice;
+    }
+
+    public double getSellPrice() {
+        return sellPrice;
+    }
+
+    public double getBuyPrice() {
+        return buyPrice;
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return this.sellPrice - this.buyPrice;
+    }
+}
