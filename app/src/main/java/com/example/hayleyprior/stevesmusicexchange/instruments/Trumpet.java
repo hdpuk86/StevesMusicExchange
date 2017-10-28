@@ -4,31 +4,31 @@ import com.example.hayleyprior.stevesmusicexchange.interfaces.Playable;
 import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
 
 /**
- * Created by hayleyprior on 27/10/2017.
+ * Created by hayleyprior on 28/10/2017.
  */
 
-public class Drum extends Instrument implements Playable, Sellable {
+public class Trumpet extends Instrument implements Playable, Sellable {
 
     private double buyPrice;
     private double sellPrice;
 
-    public Drum(Type type, String brand, String model, String colour, double buyPrice, double sellPrice) {
+    public Trumpet(Type type, String brand, String model, String colour, double buyPrice, double sellPrice) {
         super(type, brand, model, colour);
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }
 
     public double getBuyPrice() {
-        return this.buyPrice;
+        return buyPrice;
     }
 
     public double getSellPrice() {
-        return this.sellPrice;
+        return sellPrice;
     }
 
     @Override
     public String play() {
-        return "Badum tish";
+        return "Toot toot";
     }
 
     @Override

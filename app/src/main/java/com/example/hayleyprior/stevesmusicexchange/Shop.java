@@ -11,9 +11,15 @@ import java.util.ArrayList;
 public class Shop {
 
     private ArrayList<Sellable> stock;
+    private String name;
 
-    public Shop() {
+    public Shop(String name) {
         this.stock = new ArrayList<>();
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public ArrayList<Sellable> getStock() {
@@ -27,6 +33,8 @@ public class Shop {
     public void removeStock(Sellable sellable) {
         stock.remove(sellable);
     }
+
+    public int countStock() {return stock.size();}
 
     public double calculateProfits() {
         double profit = 0;

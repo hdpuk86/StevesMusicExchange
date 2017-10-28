@@ -43,6 +43,11 @@ public class TestDrum {
     }
 
     @Test
+    public void getName() {
+        assertEquals("Yamaha XXX", drum.getName());
+    }
+
+    @Test
     public void drumCanPlay() {
         assertEquals("Badum tish", drum.play());
     }

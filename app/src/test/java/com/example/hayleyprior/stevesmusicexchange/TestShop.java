@@ -23,7 +23,7 @@ public class TestShop {
     public void setUp() throws Exception {
         this.piano = new Piano(KEYBOARD, "Yamaha", "Keyboard", "Black", 100.00, 500.00);
         this.sticks = new Drumsticks(8.00, 22.00);
-        this.shop = new Shop();
+        this.shop = new Shop("Music Shop");
     }
 
     @Test
@@ -51,6 +51,12 @@ public class TestShop {
         this.shop.addStock(this.piano);
         this.shop.addStock(this.sticks);
         assertEquals(414.00, this.shop.calculateProfits(), 0.1);
+    }
+
+    @Test
+    public void canCountStock() {
+        this.shop.addStock(sticks);
+        assertEquals(1, this.shop.countStock());
     }
 
 }
