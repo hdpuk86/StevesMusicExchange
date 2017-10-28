@@ -1,11 +1,12 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.instruments.Drum;
+import com.example.hayleyprior.stevesmusicexchange.instruments.Type;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static android.R.attr.type;
-import static android.icu.lang.UCharacter.JoiningGroup.PE;
-import static com.example.hayleyprior.stevesmusicexchange.Type.PERCUSSION;
+import static com.example.hayleyprior.stevesmusicexchange.instruments.Type.PERCUSSION;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -18,7 +19,7 @@ public class TestDrum {
 
     @Before
     public void before() {
-        drum = new Drum(PERCUSSION, "White", 50.00, 180.00);
+        drum = new Drum(PERCUSSION, "Yamaha", "XXX", "White", 50.00, 180.00);
     }
 
     @Test
@@ -29,6 +30,16 @@ public class TestDrum {
     @Test
     public void getColour() {
         assertEquals("White", drum.getColour());
+    }
+
+    @Test
+    public void getBrand() {
+        assertEquals("Yamaha", drum.getBrand());
+    }
+
+    @Test
+    public void getModel() {
+        assertEquals("XXX", drum.getModel());
     }
 
     @Test

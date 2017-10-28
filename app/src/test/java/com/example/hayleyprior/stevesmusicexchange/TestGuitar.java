@@ -1,9 +1,11 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.instruments.Guitar;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.example.hayleyprior.stevesmusicexchange.Type.STRING;
+import static com.example.hayleyprior.stevesmusicexchange.instruments.Type.STRING;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -17,8 +19,8 @@ public class TestGuitar {
 
     @Before
     public void before() {
-        electricGuitar = new Guitar(STRING, "Pink", 43.50, 120.99, 6, true);
-        acousticGuitar = new Guitar(STRING, "Brown", 39.00, 100.00, 6, false);
+        electricGuitar = new Guitar(STRING, "Fender", "Squier", "Pink", 80.80, 229.99, 6, true);
+        acousticGuitar = new Guitar(STRING, "Fender", "Classic", "Brown", 39.00, 100.00, 6, false);
     }
 
     @Test
@@ -33,7 +35,17 @@ public class TestGuitar {
 
     @Test
     public void getMarkUp() {
-        assertEquals(77.49, electricGuitar.calculateMarkUp(), 0.1);
+        assertEquals(149.19, electricGuitar.calculateMarkUp(), 0.1);
+    }
+
+    @Test
+    public void canAmplifyElectric() {
+        assertEquals("NEOWW", electricGuitar.amplify());
+    }
+
+    @Test
+    public void cannotAmplifyAcoustic() {
+        assertEquals("Cannot amplify", acousticGuitar.amplify());
     }
 
 }

@@ -1,9 +1,11 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.instruments.Saxophone;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.example.hayleyprior.stevesmusicexchange.Type.WOODWIND;
+import static com.example.hayleyprior.stevesmusicexchange.instruments.Type.WOODWIND;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -16,7 +18,7 @@ public class TestSaxophone {
 
     @Before
     public void setUp() throws Exception {
-        saxophone = new Saxophone(WOODWIND, "Gold", 100.00, 300.00);
+        saxophone = new Saxophone(WOODWIND, "Selmer", "Alto", "Gold", 100.00, 300.00);
     }
 
     @Test

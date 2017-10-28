@@ -1,9 +1,12 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.instruments.Piano;
+import com.example.hayleyprior.stevesmusicexchange.equipment.Drumsticks;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.example.hayleyprior.stevesmusicexchange.Type.KEYBOARD;
+import static com.example.hayleyprior.stevesmusicexchange.instruments.Type.KEYBOARD;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -18,7 +21,7 @@ public class TestShop {
 
     @Before
     public void setUp() throws Exception {
-        this.piano = new Piano(KEYBOARD, "Black", 100.00, 500.00);
+        this.piano = new Piano(KEYBOARD, "Yamaha", "Keyboard", "Black", 100.00, 500.00);
         this.sticks = new Drumsticks(8.00, 22.00);
         this.shop = new Shop();
     }

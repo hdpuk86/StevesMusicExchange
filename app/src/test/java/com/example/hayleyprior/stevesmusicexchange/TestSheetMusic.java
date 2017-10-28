@@ -1,5 +1,7 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.equipment.SheetMusic;
+
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,7 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
+import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
+
 import java.util.ArrayList;
 
 /**

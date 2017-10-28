@@ -1,4 +1,7 @@
-package com.example.hayleyprior.stevesmusicexchange;
+package com.example.hayleyprior.stevesmusicexchange.instruments;
+
+import com.example.hayleyprior.stevesmusicexchange.interfaces.Playable;
+import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
 
 /**
  * Created by hayleyprior on 27/10/2017.
@@ -9,8 +12,8 @@ public class Piano extends Instrument implements Playable, Sellable {
     private double buyPrice;
     private double sellPrice;
 
-    public Piano(Type type, String colour, double buyPrice, double sellPrice) {
-        super(type, colour);
+    public Piano(Type type, String brand, String model, String colour, double buyPrice, double sellPrice) {
+        super(type, brand, model, colour);
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }

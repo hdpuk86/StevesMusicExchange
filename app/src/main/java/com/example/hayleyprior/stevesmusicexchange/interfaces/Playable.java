@@ -1,4 +1,4 @@
-package com.example.hayleyprior.stevesmusicexchange;
+package com.example.hayleyprior.stevesmusicexchange.interfaces;
 
 /**
  * Created by hayleyprior on 27/10/2017.

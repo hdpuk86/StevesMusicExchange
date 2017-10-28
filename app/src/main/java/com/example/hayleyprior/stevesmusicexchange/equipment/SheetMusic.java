@@ -1,4 +1,6 @@
-package com.example.hayleyprior.stevesmusicexchange;
+package com.example.hayleyprior.stevesmusicexchange.equipment;
+
+import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
 
 /**
  * Created by hayleyprior on 27/10/2017.
