@@ -6,6 +6,8 @@ package com.example.hayleyprior.stevesmusicexchange.interfaces;
 
 public interface Sellable {
 
+    double getBuyPrice();
+    double getSellPrice();
     double calculateMarkUp();
 
 }

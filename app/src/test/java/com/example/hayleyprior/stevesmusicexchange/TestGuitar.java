@@ -14,8 +14,8 @@ import static org.junit.Assert.assertEquals;
 
 public class TestGuitar {
 
-    Guitar acousticGuitar;
-    Guitar electricGuitar;
+    private Guitar acousticGuitar;
+    private Guitar electricGuitar;
 
     @Before
     public void before() {

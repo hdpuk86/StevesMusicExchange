@@ -1,6 +1,6 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
-import com.example.hayleyprior.stevesmusicexchange.equipment.Drumsticks;
+import com.example.hayleyprior.stevesmusicexchange.equipment.Drumstick;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,11 +13,11 @@ import static org.junit.Assert.assertEquals;
 
 public class TestDrumsticks {
 
-    Drumsticks drumsticks;
+    Drumstick drumsticks;
 
     @Before
     public void setUp() throws Exception {
-        drumsticks = new Drumsticks(5.00, 30.00);
+        drumsticks = new Drumstick(5.00, 30.00);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.example.hayleyprior.stevesmusicexchange;
 
-import com.example.hayleyprior.stevesmusicexchange.equipment.GuitarStrings;
+import com.example.hayleyprior.stevesmusicexchange.equipment.GuitarString;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,11 +13,11 @@ import static org.junit.Assert.assertEquals;
 
 public class TestGuitarStrings {
 
-    GuitarStrings strings;
+    GuitarString strings;
 
     @Before
     public void setUp() throws Exception {
-        strings = new GuitarStrings(6.00, 12.00);
+        strings = new GuitarString(6.00, 12.00);
     }
 
     @Test

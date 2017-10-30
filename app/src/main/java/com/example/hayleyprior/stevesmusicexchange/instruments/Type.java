@@ -10,6 +10,6 @@ public enum Type {
     STRING,
     PERCUSSION,
     KEYBOARD,
-    WOODWIND;
+    WOODWIND
 
 }

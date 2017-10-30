@@ -7,23 +7,11 @@ import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
  * Created by hayleyprior on 27/10/2017.
  */
 
-public class Piano extends Instrument implements Playable, Sellable {
+public class Piano extends Instrument {
 
-    private double buyPrice;
-    private double sellPrice;
 
     public Piano(Type type, String brand, String model, String colour, double buyPrice, double sellPrice) {
-        super(type, brand, model, colour);
-        this.buyPrice = buyPrice;
-        this.sellPrice = sellPrice;
-    }
-
-    public double getBuyPrice() {
-        return this.buyPrice;
-    }
-
-    public double getSellPrice() {
-        return this.sellPrice;
+        super(type, brand, model, colour, buyPrice, sellPrice);
     }
 
     @Override
@@ -31,8 +19,4 @@ public class Piano extends Instrument implements Playable, Sellable {
         return "Plink";
     }
 
-    @Override
-    public double calculateMarkUp() {
-        return this.sellPrice - this.buyPrice;
-    }
 }

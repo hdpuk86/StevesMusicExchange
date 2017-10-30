@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TestSaxophone {
 
-    Saxophone saxophone;
+    private Saxophone saxophone;
 
     @Before
     public void setUp() throws Exception {

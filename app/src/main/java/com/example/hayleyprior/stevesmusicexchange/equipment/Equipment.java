@@ -3,29 +3,31 @@ package com.example.hayleyprior.stevesmusicexchange.equipment;
 import com.example.hayleyprior.stevesmusicexchange.interfaces.Sellable;
 
 /**
- * Created by hayleyprior on 27/10/2017.
+ * Created by hayleyprior on 30/10/2017.
  */
 
-public class GuitarStrings implements Sellable {
+public abstract class Equipment implements Sellable{
 
     private double buyPrice;
     private double sellPrice;
 
-    public GuitarStrings(double buyPrice, double sellPrice) {
+    public Equipment(double buyPrice, double sellPrice) {
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }
 
+    @Override
     public double getBuyPrice() {
-        return buyPrice;
+        return this.buyPrice;
     }
 
+    @Override
     public double getSellPrice() {
-        return sellPrice;
+        return this.sellPrice;
     }
 
     @Override
     public double calculateMarkUp() {
-        return this.sellPrice - this.buyPrice;
+        return getSellPrice() - getBuyPrice();
     }
 }

@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TestDrum {
 
-    Drum drum;
+    private Drum drum;
 
     @Before
     public void before() {

@@ -10,39 +10,32 @@ import java.util.ArrayList;
 
 public class Shop {
 
-    private ArrayList<Sellable> stock;
+    private Stock stockList;
     private String name;
 
-    public Shop(String name) {
-        this.stock = new ArrayList<>();
+    public Shop(String name, Stock stockList) {
         this.name = name;
+        this.stockList = stockList;
     }
 
     public String getName() {
         return this.name;
     }
 
-    public ArrayList<Sellable> getStock() {
-        return this.stock;
+    public int countStock() {
+        return this.stockList.countStock();
     }
 
     public void addStock(Sellable sellable) {
-        stock.add(sellable);
+        this.stockList.addStock(sellable);
     }
 
     public void removeStock(Sellable sellable) {
-        stock.remove(sellable);
+        this.stockList.removeStock(sellable);
     }
 
-    public int countStock() {return stock.size();}
-
     public double calculateProfits() {
-        double profit = 0;
-        for(Sellable sellable : this.stock) {
-            double markUp = sellable.calculateMarkUp();
-            profit += markUp;
-        }
-        return profit;
+        return this.stockList.calculateProfits();
     }
 
 }
